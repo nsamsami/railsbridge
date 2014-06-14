@@ -1,0 +1,8 @@
+<h1>RailsBridgeCorp Open Jobs</h1>
+
+<% @job.each do |job| %>
+  <h3><%= job.title %></h3>
+  <p><%= link_to "Edit Posting", edit_job_path(job)%></p>
+  <h5><%= link_to 'Delete Posting', job, method: :delete %></h5>
+  <p><%= job.description %></p>
+<% end %>
